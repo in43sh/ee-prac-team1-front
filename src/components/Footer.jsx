@@ -12,26 +12,31 @@ import { theme } from "../utils/theme";
 const Footer = () => {
     const githubProfiles = [
         {
+            id: 1,
             name: "Oxana Michkasova",
             username: "oxangyal",
             avatarUrl: "https://avatars.githubusercontent.com/u/103294778?v=4",
         },
         {
+            id: 2,
             name: "Fany Kreminski",
             username: "Kremifany",
             avatarUrl: "https://avatars.githubusercontent.com/u/34751960?v=4",
         },
         {
+            id: 3,
             name: "Vitalii Popovych",
             username: "vitaliipp",
             avatarUrl: "https://avatars.githubusercontent.com/u/109319234?v=4",
         },
         {
+            id: 4,
             name: "Ljiljana Janjic",
             username: "Ljanjic",
             avatarUrl: "https://avatars.githubusercontent.com/u/118481016?v=4",
         },
         {
+            id: 5,
             name: "Tammam Alwafai",
             username: "TammamWafai",
             avatarUrl: "https://avatars.githubusercontent.com/u/47179662?v=4",
@@ -52,6 +57,7 @@ const Footer = () => {
                 >
                     {/* Icons of GitHub repositories of creators */}
                     <Typography
+                        component="div" // This prop changes the underlying element
                         sx={{
                             ...theme.typography,
                             fontWeight: "700",
@@ -60,6 +66,7 @@ const Footer = () => {
                         Crafted by
                         {githubProfiles.map((profile) => (
                             <IconButton
+                                key={ profile.id }
                                 sx={{ ml: 1 }}
                                 color="inherit"
                                 href={`https://github.com/${profile.username}`}
