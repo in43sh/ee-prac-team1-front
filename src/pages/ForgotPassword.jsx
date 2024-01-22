@@ -6,19 +6,20 @@ import {
   ThemeProvider,
 } from '@mui/material'
 import { theme } from '../utils/theme'
-import Logo from '../assets/logo70.png'
+// import Logo from '../assets/logo70.png'
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 
 import Footer from "../components/Footer";
 
-import { toast, ToastContainer } from 'react-toastify' // Add this import
+import { toast } from 'react-toastify' // Add this import
+// import { ToastContainer } from 'react-toastify' // Add this import
 import 'react-toastify/dist/ReactToastify.css' // Add this import
 
 import Navbar from '../components/Navbar'
 import axios from 'axios'
-import { userDataContext } from '../context/userContext'
+// import { userDataContext } from '../context/userContext'
 
 const validationSchema = yup.object({
   email: yup

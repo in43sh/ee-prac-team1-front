@@ -42,6 +42,7 @@ const Navbar = () => {
       fetchUserData(loggedInUser)
     }
     setInitials(getInitials())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setUserData])
 
   const fetchUserData = async (token) => {

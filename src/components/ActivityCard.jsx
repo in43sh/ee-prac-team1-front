@@ -31,6 +31,7 @@ const ActivityCard = ({ activity }) => {
     );
     setSingleActivity(activity);
     setIsAdded(isPlayerAdded);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const addUserToActivity = async () => {
