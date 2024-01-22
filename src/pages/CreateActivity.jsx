@@ -246,7 +246,7 @@ const CreateActivity = () => {
                                     formik.touched.activityType &&
                                     Boolean(formik.errors.activityType)
                                 }
-                                helperText={
+                                helpertext={
                                     formik.touched.activityType &&
                                     formik.errors.activityType
                                 }
@@ -300,7 +300,7 @@ const CreateActivity = () => {
                                             formik.touched.date &&
                                             Boolean(formik.errors.date)
                                         }
-                                        helperText={
+                                        helpertext={
                                             formik.touched.date &&
                                             formik.errors.date
                                         }
@@ -333,7 +333,7 @@ const CreateActivity = () => {
                                             formik.touched.time &&
                                             Boolean(formik.errors.time)
                                         }
-                                        helperText={
+                                        helpertext={
                                             formik.touched.time &&
                                             formik.errors.time
                                         }
@@ -358,7 +358,7 @@ const CreateActivity = () => {
                                             formik.touched.minPlayers &&
                                             Boolean(formik.errors.minPlayers)
                                         }
-                                        helperText={
+                                        helpertext={
                                             formik.touched.minPlayers &&
                                             formik.errors.minPlayers
                                         }
@@ -409,7 +409,7 @@ const CreateActivity = () => {
                                             formik.touched.maxPlayers &&
                                             Boolean(formik.errors.maxPlayers)
                                         }
-                                        helperText={
+                                        helpertext={
                                             formik.touched.maxPlayers &&
                                             formik.errors.maxPlayers
                                         }
@@ -494,7 +494,7 @@ const CreateActivity = () => {
                                                         formik.handleChange
                                                     }
                                                     onBlur={formik.handleBlur}
-                                                    // InputProps={{
+                                                    // inputProps={{
                                                     //     placeholder: "Address",
                                                     // }}
                                                     error={
@@ -506,7 +506,7 @@ const CreateActivity = () => {
                                                                 ?.address
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched.location
                                                             ?.address &&
                                                         formik.errors.location
@@ -540,7 +540,7 @@ const CreateActivity = () => {
                                                         formik.handleChange
                                                     }
                                                     onBlur={formik.handleBlur}
-                                                    // InputProps={{
+                                                    // inputProps={{
                                                     //     placeholder: "City",
                                                     // }}
                                                     error={
@@ -551,7 +551,7 @@ const CreateActivity = () => {
                                                                 .location?.city
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched.location
                                                             ?.city &&
                                                         formik.errors.location
@@ -585,7 +585,7 @@ const CreateActivity = () => {
                                                         formik.handleChange
                                                     }
                                                     onBlur={formik.handleBlur}
-                                                    // InputProps={{
+                                                    // inputProps={{
                                                     //     placeholder: "State",
                                                     // }}
                                                     error={
@@ -596,7 +596,7 @@ const CreateActivity = () => {
                                                                 .location?.state
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched.location
                                                             ?.state &&
                                                         formik.errors.location
@@ -639,7 +639,7 @@ const CreateActivity = () => {
                                                                 ?.zipCode
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched.location
                                                             ?.zipCode &&
                                                         formik.errors.location
@@ -675,7 +675,7 @@ const CreateActivity = () => {
                                             formik.touched.venue &&
                                             Boolean(formik.errors.venue)
                                         }
-                                        helperText={
+                                        helpertext={
                                             formik.touched.venue &&
                                             formik.errors.venue
                                         }
@@ -724,7 +724,7 @@ const CreateActivity = () => {
                                                 formik.errors.experienceLevel
                                             )
                                         }
-                                        helperText={
+                                        helpertext={
                                             formik.touched.experienceLevel &&
                                             formik.errors.experienceLevel
                                         }
@@ -846,7 +846,7 @@ const CreateActivity = () => {
                                                                 .firstName
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched
                                                             .firstName &&
                                                         formik.errors.firstName
@@ -883,7 +883,7 @@ const CreateActivity = () => {
                                                                 .lastName
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched
                                                             .lastName &&
                                                         formik.errors.lastName
@@ -922,7 +922,7 @@ const CreateActivity = () => {
                                                                 .contactPhoneNum
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched
                                                             .contactPhoneNum &&
                                                         formik.errors
@@ -961,7 +961,7 @@ const CreateActivity = () => {
                                                                 .contactEmail
                                                         )
                                                     }
-                                                    helperText={
+                                                    helpertext={
                                                         formik.touched
                                                             .contactEmail &&
                                                         formik.errors

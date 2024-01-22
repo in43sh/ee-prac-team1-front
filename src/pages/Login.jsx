@@ -198,7 +198,7 @@ const Login = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.email && Boolean(errors.email)}
-                helperText={touched.email && errors.email}
+                helpertext={touched.email && errors.email}
               />
               <TextField
                 sx={{
@@ -218,7 +218,7 @@ const Login = () => {
                 label="Password"
                 type={showPassword ? 'text' : 'password'}
                 autoComplete="current-password"
-                InputProps={{
+                inputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
@@ -239,7 +239,7 @@ const Login = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.password && Boolean(errors.password)}
-                helperText={touched.password && errors.password}
+                helpertext={touched.password && errors.password}
               />
               <Button
                 color="primary"

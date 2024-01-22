@@ -150,7 +150,7 @@ const ForgotPassword = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.email && Boolean(errors.email)}
-                helperText={touched.email && errors.email}
+                helpertext={touched.email && errors.email}
               />
               <Button
                 color="primary"

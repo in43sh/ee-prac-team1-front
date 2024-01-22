@@ -174,7 +174,7 @@ const UpdatePassword = () => {
                 label="Current Password"
                 type={showoldPassword ? 'text' : 'password'}
                 autoComplete="current-password"
-                InputProps={{
+                inputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
@@ -195,7 +195,7 @@ const UpdatePassword = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.password && Boolean(errors.password)}
-                helperText={touched.oldPassword && errors.oldPassword}
+                helpertext={touched.oldPassword && errors.oldPassword}
               />
 
               {/* new password field */}
@@ -217,7 +217,7 @@ const UpdatePassword = () => {
                 label="New Password"
                 type={showNewPassword ? 'text' : 'password'}
                 autoComplete="current-password"
-                InputProps={{
+                inputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
@@ -238,7 +238,7 @@ const UpdatePassword = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.newPassword && Boolean(errors.newPassword)}
-                helperText={touched.newPassword && errors.newPassword}
+                helpertext={touched.newPassword && errors.newPassword}
               />
 
               {/* confirm new password field */}
@@ -264,7 +264,7 @@ const UpdatePassword = () => {
                 error={
                   touched.confirmPassword && Boolean(errors.confirmPassword)
                 }
-                helperText={touched.confirmPassword && errors.confirmPassword}
+                helpertext={touched.confirmPassword && errors.confirmPassword}
               />
               <Button
                 color="primary"

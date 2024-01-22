@@ -89,7 +89,9 @@ const Register = () => {
               email: values.email,
             },
           )
-          const { data, statusText } = response
+          const { data, statusText } = response;
+          // console.log("data ====> ", data);
+          // console.log("statusText ====> ", statusText);
 
           if (statusText !== 'Created') {
             throw new Error('Register failed')
@@ -183,7 +185,7 @@ const Register = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.firstName && Boolean(errors.firstName)}
-                helperText={touched.firstName && errors.firstName}
+                helpertext={touched.firstName && errors.firstName}
               />
               <TextField
                 sx={{
@@ -206,7 +208,7 @@ const Register = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.lastName && Boolean(errors.lastName)}
-                helperText={touched.lastName && errors.lastName}
+                helpertext={touched.lastName && errors.lastName}
               />
               <TextField
                 sx={{
@@ -229,7 +231,7 @@ const Register = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.email && Boolean(errors.email)}
-                helperText={touched.email && errors.email}
+                helpertext={touched.email && errors.email}
               />
               <TextField
                 sx={{
@@ -249,7 +251,7 @@ const Register = () => {
                 label="Password"
                 type={showPassword ? 'text' : 'password'}
                 autoComplete="current-password"
-                InputProps={{
+                inputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
@@ -270,7 +272,7 @@ const Register = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={touched.password && Boolean(errors.password)}
-                helperText={touched.password && errors.password}
+                helpertext={touched.password && errors.password}
               />
               <TextField
                 sx={{
@@ -294,7 +296,7 @@ const Register = () => {
                 error={
                   touched.confirmPassword && Boolean(errors.confirmPassword)
                 }
-                helperText={touched.confirmPassword && errors.confirmPassword}
+                helpertext={touched.confirmPassword && errors.confirmPassword}
               />
               <Button
                 color="primary"

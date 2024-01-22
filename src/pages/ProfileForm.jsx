@@ -81,22 +81,33 @@ const ProfileForm = () => {
                 if (res.data && res.data.user) {
                     const user = res.data.user;
 
-                    const dateOfBirth = user.dateOfBirth
-                        ? new Date(user.dateOfBirth)
-                        : null;
+                    // const dateOfBirth = user.dateOfBirth
+                    //     ? new Date(user.dateOfBirth)
+                    //     : null;
 
+                    // formik.setValues({
+                    //     ...user,
+                    //     dateOfBirth: dateOfBirth
+                    //         ? dateOfBirth.toISOString().split("T")[0]
+                    //         : "",
+                    //     residentialAddress: {
+                    //         address: user.residentialAddress?.address || "",
+                    //         city: user.residentialAddress?.city || "",
+                    //         state: user.residentialAddress?.state || "",
+                    //         zipCode: user.residentialAddress?.zipCode || "",
+                    //     },
+                    // });
                     formik.setValues({
-                        ...user,
-                        dateOfBirth: dateOfBirth
-                            ? dateOfBirth.toISOString().split("T")[0]
-                            : "",
+                        phoneNumber: user.phoneNumber || "",
+                        dateOfBirth: user.dateOfBirth ? new Date(user.dateOfBirth).toISOString().split("T")[0] : "",
                         residentialAddress: {
-                            address: user.residentialAddress?.address || "",
-                            city: user.residentialAddress?.city || "",
-                            state: user.residentialAddress?.state || "",
-                            zipCode: user.residentialAddress?.zipCode || "",
+                          address: user.residentialAddress?.address || "",
+                          city: user.residentialAddress?.city || "",
+                          state: user.residentialAddress?.state || "",
+                          zipCode: user.residentialAddress?.zipCode || "",
                         },
-                    });
+                        experienceLevel: user.experienceLevel || "Beginner", // Fallback to "Beginner" if undefined
+                      });
                 }
             } catch (error) {
                 console.error("Error fetching user data:", error);
@@ -239,7 +250,7 @@ const ProfileForm = () => {
                                     formik.touched.phoneNumber &&
                                     Boolean(formik.errors.phoneNumber)
                                 }
-                                helperText={
+                                helpertext={
                                     formik.touched.phoneNumber &&
                                     formik.errors.phoneNumber
                                 }
@@ -281,7 +292,7 @@ const ProfileForm = () => {
                                     formik.touched.dateOfBirth &&
                                     Boolean(formik.errors.dateOfBirth)
                                 }
-                                helperText={
+                                helpertext={
                                     formik.touched.dateOfBirth &&
                                     formik.errors.dateOfBirth
                                 }
@@ -305,7 +316,7 @@ const ProfileForm = () => {
                                 value={formik.values.residentialAddress.address}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                InputProps={{
+                                inputProps={{
                                     placeholder: "Address",
                                 }}
                                 error={
@@ -316,7 +327,7 @@ const ProfileForm = () => {
                                             ?.address
                                     )
                                 }
-                                helperText={
+                                helpertext={
                                     formik.touched.residentialAddress
                                         ?.address &&
                                     formik.errors.residentialAddress?.address
@@ -344,7 +355,7 @@ const ProfileForm = () => {
                                 value={formik.values.residentialAddress.city}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                InputProps={{
+                                inputProps={{
                                     placeholder: "City",
                                 }}
                                 error={
@@ -353,7 +364,7 @@ const ProfileForm = () => {
                                         formik.errors.residentialAddress?.city
                                     )
                                 }
-                                helperText={
+                                helpertext={
                                     formik.touched.residentialAddress?.city &&
                                     formik.errors.residentialAddress?.city
                                 }
@@ -379,7 +390,7 @@ const ProfileForm = () => {
                                 value={formik.values.residentialAddress.state}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                InputProps={{
+                                inputProps={{
                                     placeholder: "State",
                                 }}
                                 error={
@@ -388,7 +399,7 @@ const ProfileForm = () => {
                                         formik.errors.residentialAddress?.state
                                     )
                                 }
-                                helperText={
+                                helpertext={
                                     formik.touched.residentialAddress?.state &&
                                     formik.errors.residentialAddress?.state
                                 }
@@ -415,7 +426,7 @@ const ProfileForm = () => {
                                 value={formik.values.residentialAddress.zipCode}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                InputProps={{
+                                inputProps={{
                                     placeholder: "Zip Code",
                                 }}
                                 error={
@@ -426,7 +437,7 @@ const ProfileForm = () => {
                                             ?.zipCode
                                     )
                                 }
-                                helperText={
+                                helpertext={
                                     formik.touched.residentialAddress
                                         ?.zipCode &&
                                     formik.errors.residentialAddress?.zipCode
@@ -457,14 +468,14 @@ const ProfileForm = () => {
                                     value={formik.values.experienceLevel}
                                     onChange={handleChange}
                                     onBlur={formik.handleBlur}
-                                    InputProps={{
+                                    inputProps={{
                                         placeholder: "Experience",
                                     }}
                                     error={
                                         formik.touched.experienceLevel &&
                                         Boolean(formik.errors.experienceLevel)
                                     }
-                                    helperText={
+                                    helpertext={
                                         formik.touched.experienceLevel &&
                                         formik.errors.experienceLevel
                                     }

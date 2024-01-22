@@ -115,11 +115,11 @@ const SearchForm = ({ setActivitiesByZip }) => {
                 value={values.zipCode}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                InputProps={{
+                inputProps={{
                   placeholder: 'Zip Code',
                 }}
                 error={touched.zipCode && Boolean(errors.zipCode)}
-                // helperText={formik.touched.zipCode && formik.errors.zipCode}
+                // helpertext={formik.touched.zipCode && formik.errors.zipCode}
                 {...getFieldProps('zipCode')}
               />
 
